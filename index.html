@@ -1,153 +1,177 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sajal Banjara | Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
     <header>
-        <h1>Sajal Banjara</h1>
-        <p>Bachelor of Information Technology Student</p>
+        <div class="container header-content">
 
-        <nav aria-label="Main navigation">
-            <ul>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#skills">Technical Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact Me</a></li>
-            </ul>
-        </nav>
+            <div>
+                <h1>Sajal Banjara</h1>
+                <p>Bachelor of Information Technology Student</p>
+            </div>
+
+            <nav aria-label="Main navigation">
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+
+        </div>
     </header>
+
 
     <main>
 
-        <section id="about">
-            <h2>About Me</h2>
+        <section id="about" class="about">
+            <div class="container about-content">
 
-            <img src="./image/profile.jpg"
-                 alt="Profile photograph of Sajal Banjara"
-                 width="200"
-                 height="200">
+                <div>
+                    <h2>About Me</h2>
 
-            <p>
-                Hello! My name is Sajal Banjara. I am a second-year
-                Bachelor of Information Technology (BIT) student.
-            
-            </p>
+                    <p>
+                        Hello! My name is Sajal Banjara. I am a Bachelor
+                        of Information Technology student.
+                    </p>
 
-            <p>
-                I enjoy learning new technologies and developing
-                practical projects that help me improve my
-                technical and problem-solving skills.
-            </p>
+                    <p>
+                        I enjoy learning new technologies and developing
+                        practical projects to improve my technical and
+                        problem-solving skills.
+                    </p>
+
+                    <a href="#projects" class="button">View My Projects</a>
+                </div>
+
+                <img src="./image/profile.jpg"
+                     alt="Profile photograph of Sajal Banjara"
+                     width="300"
+                     height="300">
+
+            </div>
         </section>
+
 
         <section id="skills">
-            <h2>Technical Skills</h2>
+            <div class="container">
 
-            <p>
-                The following are some of the technical areas
-                I have studied and practiced during my BIT course.
-            </p>
+                <h2>Technical Skills</h2>
 
-            <dl>
-                <dt>HTML5</dt>
-                <dd>
-                    Creating structured web pages using semantic
-                    elements and accessible HTML forms.
-                </dd>
+                <div class="skills">
 
-                <dt>Java</dt>
-                <dd>
-                    Understanding object-oriented programming,
-                    classes, inheritance, and exception handling.
-                </dd>
+                    <article>
+                        <h3>HTML5</h3>
+                        <p>
+                            Creating structured web pages using
+                            semantic HTML elements.
+                        </p>
+                    </article>
 
-            </dl>
+                    <article>
+                        <h3>CSS</h3>
+                        <p>
+                            Designing responsive layouts and
+                            styling web pages.
+                        </p>
+                    </article>
+
+                    <article>
+                        <h3>Java</h3>
+                        <p>
+                            Understanding classes, inheritance
+                            and object-oriented programming.
+                        </p>
+                    </article>
+
+                </div>
+
+            </div>
         </section>
 
-        <section id="projects">
-            <h2>My Projects</h2>
 
-            <article>
-                <h3>Project 1: Personal Portfolio Website</h3>
+        <section id="projects" class="projects">
+            <div class="container">
 
-                <p>
-                    This project is a single-page personal portfolio
-                    developed using semantic HTML5. It presents
-                    my biography and technical skills.
-                </p>
+                <h2>My Projects</h2>
 
-                <p>
-                    Technologies Used: HTML5
-                </p>
+                <article class="project">
 
-                <p>
-                    <a href="https://github.com/YOUR-USERNAME/personal-portfolio">
-                        View Portfolio Repository on GitHub
+                    <h3>Personal Portfolio Website</h3>
+
+                    <p>
+                        A personal portfolio website developed using
+                        semantic HTML5 and CSS. It presents my
+                        background, skills and project information.
+                    </p>
+
+                    <p><strong>Technologies:</strong> HTML5, CSS3</p>
+
+                    <a href="https://github.com/YOUR-USERNAME/personal-portfolio"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        View GitHub Repository
                     </a>
-                </p>
-            </article>
 
+                </article>
 
+            </div>
         </section>
-
         <section id="contact">
-            <h2>Contact Me</h2>
+            <div class="container">
 
-            <p>
-                If you would like to contact me regarding
-                projects, learning opportunities, or collaboration,
-                please complete the form below.
-            </p>
-
-            <form action="mailto:YOUR-EMAIL@example.com"
-                  method="post"
-                  enctype="text/plain">
+                <h2>Contact Me</h2>
 
                 <p>
-                    <label for="name">Full Name:</label>
+                    If you would like to contact me regarding projects,
+                    learning opportunities or collaboration, please
+                    complete the form below.
+                </p>
+
+                <form action="mailto:YOUR-EMAIL@example.com"
+                      method="post"
+                      enctype="text/plain">
+
+                    <label for="name">Full Name</label>
                     <input type="text"
                            id="name"
                            name="name"
                            required>
-                </p>
 
-                <p>
-                    <label for="email">Email Address:</label>
+                    <label for="email">Email Address</label>
                     <input type="email"
                            id="email"
                            name="email"
                            required>
-                </p>
 
-                <p>
-                    <label for="message">Your Message:</label>
+                    <label for="message">Your Message</label>
                     <textarea id="message"
                               name="message"
                               rows="5"
-                              cols="40"
                               required></textarea>
-                </p>
 
-                <button type="submit">Send Message</button>
+                    <button type="submit">Send Message</button>
 
-            </form>
+                </form>
+
+            </div>
         </section>
 
     </main>
-
     <footer>
-        <p>
-            &copy; 2026 Sajal Banjara. All rights reserved.
-        </p>
-
-        <p>
-            Personal Portfolio | Bachelor of Information Technology
-        </p>
+        <div class="container">
+            <p>&copy; 2026 Sajal Banjara. All rights reserved.</p>
+            <p>Personal Portfolio | Bachelor of Information Technology</p>
+        </div>
     </footer>
 
 </body>
