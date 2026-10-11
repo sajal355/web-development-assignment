@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Image Slider</title>
+    <link rel="stylesheet" href="stylew4.css">
+    <script src="slider.js" defer></script>
+</head>
+<body>
+
+    <main class="container">
+        <h1>Responsive Image Slider</h1>
+        <p>Click the arrows or dots to change images.</p>
+
+        <div class="slider"> 
+
+            <div class="slider-viewport">
+                <div class="slider-track" id="sliderTrack">
+
+                    <div class="slide">
+                        <img src="w4picture3.jpg" alt=" xyz">
+                    </div>
+
+                    <div class="slide">
+                        <img src="picturew4.jpg" alt="ABC">
+                    </div>
+
+                    <div class="slide">
+                        <img src="images.jpg" alt="LNM">
+                    </div>
+
+                    <div class="slide">
+                        <img src="w4picture2.jpg" alt="CAT">
+                    </div>
+
+                </div>
+            </div>
+
+            <button class="arrow previous" id="previousButton"
+                    aria-label="Previous image">
+                &#10094;
+            </button>
+
+            <button class="arrow next" id="nextButton"
+                    aria-label="Next image">
+                &#10095;
+            </button>
+
+            <div class="slider-dots" id="sliderDots"></div>
+
+        </div>
+    </main>
+
+</body>
+</html>

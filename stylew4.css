@@ -1,0 +1,122 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f2f5f9;
+    color: #222;
+}
+.container {
+    width: 90%;
+    max-width: 900px;
+    margin: 40px auto;
+    text-align: center;
+}
+h1 {
+    margin-bottom: 10px;
+}
+.slider {
+    position: relative;
+    width: 100%;
+    margin-top: 30px;
+}
+.slider-viewport {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 12px;
+}
+.slider-track {
+    display: flex;
+    transform: translateX(0);
+    transition: transform 450ms ease-in-out;
+    will-change: transform;
+}
+
+.slide {
+    flex: 0 0 100%;
+    min-width: 0;
+}
+
+.slide img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.65);
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.arrow:hover {
+    background-color: #1769aa;
+}
+
+.previous {
+    left: 12px;
+}
+
+.next {
+    right: 12px;
+}
+
+.slider-dots {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background-color: #bbb;
+    cursor: pointer;
+    transition: background-color 200ms ease,
+                transform 200ms ease;
+}
+
+.dot.active {
+    background-color: #1769aa;
+    transform: scale(1.25);
+}
+.arrow:focus-visible,
+.dot:focus-visible {
+    outline: 3px solid orange;
+    outline-offset: 3px;
+}
+@media (max-width: 600px) {
+    .container {
+        width: 95%;
+        margin: 25px auto;
+    }
+
+    .arrow {
+        width: 36px;
+        height: 36px;
+        font-size: 16px;
+    }
+
+    .previous {
+        left: 8px;
+    }
+
+    .next {
+        right: 8px;
+    }
+}
